@@ -2,7 +2,6 @@ import Notification from '../Notification/Notification'
 
 
 const FeedBack = ({FeedBacks, totalFeedbackPercent}) => {
-    console.log(totalFeedbackPercent)
     return (
         <>
                 <div>
