@@ -1,7 +1,7 @@
 import Notification from '../Notification/Notification'
 
 
-const FeedBack = ({FeedBacks, TotalFeedbackPersent, FeedBacksStatus}) => {
+const FeedBack = ({FeedBacks, totalFeedbackPersent, FeedBacksStatus}) => {
     return (
         <>
             {FeedBacksStatus === true ? (
@@ -9,7 +9,7 @@ const FeedBack = ({FeedBacks, TotalFeedbackPersent, FeedBacksStatus}) => {
                 <p>good: {FeedBacks.good}</p>
                 <p>neutral: {FeedBacks.neutral}</p>
                 <p>bad: {FeedBacks.bad}</p>
-                <p>Positiv: {TotalFeedbackPersent}%</p>
+                <p>Positiv: {totalFeedbackPersent}%</p>
                 </div>
             ):(
                 <Notification />

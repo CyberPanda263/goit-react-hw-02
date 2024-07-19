@@ -30,18 +30,12 @@ const App = () => {
     }
   }, [FeedBacksStatus]);
 
-  const [TotalFeedbackPersent, setTotalFeedbackPersent] = useState();
-
   const totalFeedback = FeedBacks.good + FeedBacks.neutral + FeedBacks.bad;
-
-  useEffect(() => {
-    setTotalFeedbackPersent(Math.round((FeedBacks.good / totalFeedback) * 100))
-  }, [TotalFeedbackPersent]);
+  const totalFeedbackPersent = (Math.round((FeedBacks.good / totalFeedback) * 100));
 
   const handleUpdateFeedback = feedbackType => {
     setFeedBacks(FeedBacks => ({...FeedBacks, [feedbackType]: FeedBacks[feedbackType] + 1}),
     setFeedBacksStatus (true),
-    setTotalFeedbackPersent (Math.round((FeedBacks.good / totalFeedback) * 100))
   )
     }
 
@@ -65,7 +59,7 @@ const App = () => {
       />
       <FeedBack
       FeedBacks={FeedBacks}
-      TotalFeedbackPersent={TotalFeedbackPersent}
+      totalFeedbackPersent={totalFeedbackPersent}
       FeedBacksStatus={FeedBacksStatus}
        />
     </>
