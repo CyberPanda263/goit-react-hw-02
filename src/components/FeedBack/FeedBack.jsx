@@ -1,13 +1,14 @@
 import Notification from '../Notification/Notification'
 
 
-const FeedBack = ({FeedBacks, totalFeedbackPercent}) => {
+const FeedBack = ({FeedBacks, totalFeedbackPercent,totalFeedback}) => {
     return (
         <>
                 <div>
-                <p>good: {FeedBacks.good}</p>
-                <p>neutral: {FeedBacks.neutral}</p>
-                <p>bad: {FeedBacks.bad}</p>
+                <p>Good: {FeedBacks.good}</p>
+                <p>Neutral: {FeedBacks.neutral}</p>
+                <p>Bad: {FeedBacks.bad}</p>
+                <p>Total: {totalFeedback}</p>
                 <p>Positiv: {totalFeedbackPercent}%</p>
                 </div>
         </>

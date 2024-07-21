@@ -52,6 +52,7 @@ const App = () => {
         <FeedBack
           FeedBacks={FeedBacks}
           totalFeedbackPercent={totalFeedbackPercent}
+          totalFeedback={totalFeedback}
         />
       ) : (
         <Notification message="No FeedBack yet" />
